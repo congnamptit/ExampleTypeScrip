@@ -20,7 +20,6 @@ import {TextField} from './src/components/elements/TextField';
 import {FormTextField} from './src/components/elements/FormTextField';
 import {isValidEmail, isValidPassword} from './src/constants/Validatios';
 import {SizedBox} from './src/components/elements/SizedBox';
-// import SplashScreen from 'react-native-splash-screen';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
