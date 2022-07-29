@@ -5,6 +5,7 @@ import {TextField} from './TextField';
 
 interface FormProps {
   width?: number | string;
+  radius?: number;
   textName: string;
   marginLeft?: number | string;
   color?: ColorValue;
@@ -12,18 +13,23 @@ interface FormProps {
   value?: string;
   textValidate?: string;
   onChangeText?: (text: string) => void;
+  borderColor?: string | undefined;
+  backgroundColor: string | undefined;
 }
 
 export const FormTextField: React.FC<FormProps> = (props: FormProps) => {
   const {
     textName,
     width,
+    radius,
     marginLeft,
     color,
     onChangeText,
     value,
     textValidate,
     isShowText,
+    borderColor,
+    backgroundColor,
   } = props;
 
   return (
@@ -40,18 +46,18 @@ export const FormTextField: React.FC<FormProps> = (props: FormProps) => {
       </Text>
       <TextField
         colorText={'red'}
-        radius={30}
+        radius={radius ?? 0}
         isShowText={isShowText}
         placeholderText="Password"
         borderWidth={1}
         height={40}
         padding={10}
-        marginHorizontal={20}
+        // marginHorizontal={20}
         marginVertical={5}
         marginLeft={30}
         placeholderColor={''}
-        backgroundColor={'azure'}
-        borderColor={'cyan'}
+        backgroundColor={backgroundColor ?? 'azure'}
+        borderColor={borderColor ?? 'cyan'}
         value={value}
         textValidate={textValidate}
         onChangeText={onChangeText}

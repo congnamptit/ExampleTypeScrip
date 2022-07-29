@@ -1,6 +1,7 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {ColorValue, Text, TextInput, View} from 'react-native';
-
+import {ColorValue, Text, View, TextInput} from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 interface TextFieldProps {
   colorText?: ColorValue;
   colorTextValidate?: ColorValue;
@@ -56,7 +57,10 @@ export const TextField: React.FC<TextFieldProps> = (props: TextFieldProps) => {
           borderColor: borderColor ?? 'black',
           marginHorizontal: marginHorizontal ?? 0,
           marginVertical: marginVertical ?? 0,
+          flexDirection: 'row',
+          alignItems: 'center',
         }}>
+        <Icon name="voicemail" />
         <TextInput
           style={{
             color: colorText ?? 'black',

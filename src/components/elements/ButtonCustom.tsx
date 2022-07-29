@@ -19,6 +19,7 @@ interface ButtonProps {
   flexDirection?: any;
   crossAxits?: any;
   mainAxits?: any;
+  borderWidth?: number;
 }
 
 export const ButtonCustom: React.FC<ButtonProps> = (props: ButtonProps) => {
@@ -38,6 +39,7 @@ export const ButtonCustom: React.FC<ButtonProps> = (props: ButtonProps) => {
     fontWeight,
     crossAxits,
     mainAxits,
+    borderWidth,
   } = props;
   return (
     <View style={{width: width ?? '100%'}}>
@@ -47,12 +49,13 @@ export const ButtonCustom: React.FC<ButtonProps> = (props: ButtonProps) => {
           margin: margin ?? 0,
           marginHorizontal: marginHorizontal ?? 0,
           marginVertical: marginVertical ?? 0,
-          backgroundColor: backGroundColor ?? 'white',
+          backgroundColor: backGroundColor ?? 'blue',
           borderColor: colorBorder ?? 'black',
           height: height ?? 10,
           padding: padding ?? 0,
           alignItems: crossAxits ?? 'center',
           justifyContent: mainAxits ?? 'center',
+          borderWidth: borderWidth ?? 0,
         }}
         onPress={onPress}>
         <Text
