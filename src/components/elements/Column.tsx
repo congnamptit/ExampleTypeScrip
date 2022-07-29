@@ -11,7 +11,7 @@ export const Column: React.FC<
     marginVertical?: number | string;
     marginHorizontal?: number | string;
     height?: number | string;
-    backGroundColor?: ColorValue;
+    backgroundColor?: ColorValue;
     colorBorder?: ColorValue;
     crossAxits?: FlexAlignType;
     mainAxits?:
@@ -28,7 +28,7 @@ export const Column: React.FC<
   width,
   padding,
   height,
-  backGroundColor,
+  backgroundColor,
   colorBorder,
   margin,
   marginHorizontal,
@@ -47,7 +47,7 @@ export const Column: React.FC<
         marginHorizontal: marginHorizontal ?? 0,
         marginVertical: marginVertical ?? 0,
         borderColor: colorBorder ?? 'black',
-        backgroundColor: backGroundColor ?? 'white',
+        backgroundColor: backgroundColor ?? 'white',
         flexDirection: 'column',
         alignItems: crossAxits ?? 'center',
         justifyContent: mainAxits ?? 'center',
